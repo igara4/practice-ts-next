@@ -16,3 +16,11 @@ export function slash(str: string) {
 export const slash2 = (str: string) => {
   return str.replace(/\\/g, "/");
 };
+
+export function capitalize(str: string) {
+  return str[0].toUpperCase() + str.slice(1).toLowerCase();
+}
+
+export const capitalize2 = (str: string) => {
+  return str[0].toUpperCase() + str.slice(1).toLowerCase();
+};
