@@ -39,3 +39,11 @@ export function flattenArrayable<T>(
 ): Array<T> {
   return toArray(array).flat(1) as Array<T>;
 }
+
+export function maxInArray(arr: number[]): number | null {
+  if (arr.length === 0) {
+    return null;
+  } else {
+    return Math.max(...arr);
+  }
+}
