@@ -47,3 +47,7 @@ export function maxInArray(arr: number[]): number | null {
     return Math.max(...arr);
   }
 }
+
+export const filterEvenNumber = (arr: number[]): number[] => {
+  return arr.filter((n) => n % 2 === 0);
+};
