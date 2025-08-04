@@ -61,3 +61,43 @@ export const sumArray = (arr: number[]): number => {
     return sum + element;
   }, 0);
 };
+
+export const countChar = (str: string, char: string): number => {
+  return str.split("").filter((c) => {
+    c === char;
+  }).length;
+};
+
+export const countChar2 = (str: string, char: string): number => {
+  let count = 0;
+  for (const c of str) {
+    if (c === char) count++;
+  }
+  return count;
+};
+
+export const filterPositiveNumbers = (arr: number[]): number[] => {
+  return arr.filter((p) => p > 0);
+};
+
+export const filterEvenNumbers = (arr: number[]): number[] => {
+  return arr.filter((p) => p % 2 === 0);
+};
+
+export const filterOddNumbers = (arr: number[]): number[] => {
+  const result: number[] = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 1) result.push(arr[i]);
+  }
+  return result;
+};
+
+export const filterOddNumbers2 = (arr: number[]): number[] => {
+  const result: number[] = [];
+  for (const num of arr) {
+    if (num % 2 === 1) {
+      result.push(num);
+    }
+  }
+  return result;
+};
