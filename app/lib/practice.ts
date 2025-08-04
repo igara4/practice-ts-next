@@ -55,3 +55,9 @@ export const filterEvenNumber = (arr: number[]): number[] => {
 export const isPalindrome = (str: string): boolean => {
   return str === str.split("").reverse().join("");
 };
+
+export const sumArray = (arr: number[]): number => {
+  return arr.reduce((sum, element) => {
+    return sum + element;
+  }, 0);
+};
