@@ -51,3 +51,7 @@ export function maxInArray(arr: number[]): number | null {
 export const filterEvenNumber = (arr: number[]): number[] => {
   return arr.filter((n) => n % 2 === 0);
 };
+
+export const isPalindrome = (str: string): boolean => {
+  return str === str.split("").reverse().join("");
+};
