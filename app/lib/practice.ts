@@ -101,3 +101,10 @@ export const filterOddNumbers2 = (arr: number[]): number[] => {
   }
   return result;
 };
+
+export const capitalizeWords = (str: string): string => {
+  return str
+    .split(" ")
+    .map((word) => word.slice(0, 1).toUpperCase() + str.slice(1))
+    .join(" ");
+};
