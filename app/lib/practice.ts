@@ -136,3 +136,24 @@ export const removeDuplicates = (arr: number[]) => {
   const setNums = Array.from(set);
   return setNums;
 };
+
+export const fizzBuzz = (n: number) => {
+  const arr = [];
+  for (let i = 1; i <= n; i++) {
+    if (i % 15 === 0) {
+      arr.push("FizzBuzz");
+    } else if (i % 3 === 0) {
+      arr.push("Fizz");
+    } else if (i % 5 === 0) {
+      arr.push("Buzz");
+    } else {
+      arr.push(i.toString());
+    }
+  }
+  return arr;
+};
+
+export const average = (arr: number[]) => {
+  if (arr.length === 0) return null;
+  return arr.reduce((sum, element) => sum + element) / arr.length;
+};
