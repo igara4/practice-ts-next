@@ -108,3 +108,11 @@ export const capitalizeWords = (str: string): string => {
     .map((word) => word.slice(0, 1).toUpperCase() + str.slice(1))
     .join(" ");
 };
+
+export const mostFrequentChar = (str: string): string | null => {
+  if (str.length === 0) return null;
+  const count: Record<string, number> = {};
+  for (const char of str) {
+    count[char] = (count[char] ?? 0) + 1;
+  }
+};
