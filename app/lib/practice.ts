@@ -111,8 +111,28 @@ export const capitalizeWords = (str: string): string => {
 
 export const mostFrequentChar = (str: string): string | null => {
   if (str.length === 0) return null;
+
   const count: Record<string, number> = {};
   for (const char of str) {
     count[char] = (count[char] ?? 0) + 1;
   }
+
+  let maxChar = "";
+  let maxCount = 0;
+
+  for (const char in count) {
+    if (count[char] > maxCount) {
+      maxChar = char;
+      maxCount = count[char];
+    }
+  }
+  return maxChar;
+};
+
+export const removeDuplicates = (arr: number[]) => {
+  if (arr.length === 0) return;
+
+  const set = new Set(arr);
+  const setNums = Array.from(set);
+  return setNums;
 };
