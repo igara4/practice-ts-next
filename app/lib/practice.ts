@@ -183,3 +183,32 @@ export const sortString = (str: string): string => {
 export const reverseSort = (str: string): string => {
   return str.split("").sort().reverse().join("");
 };
+
+export const slash3 = (str: string) => {
+  return str.replace(/\\/g, "/");
+};
+
+export const ensurePrefix3 = (prefix: string, str: string) => {
+  if (!str.startsWith(prefix)) {
+    return prefix + str;
+  }
+  return str;
+};
+
+export const ensureSuffix3 = (suffix: string, str: string) => {
+  if (!str.endsWith(suffix)) {
+    return str + suffix;
+  }
+  return;
+};
+
+export const capitalize3 = (str: string) => {
+  return str.slice(0, 1).toUpperCase() + str.slice(1).toLowerCase();
+};
+
+export function toArray3<T>(arr?: Nullable<Arrayable<T>>) {
+  arr = arr === null || arr === undefined ? [] : arr;
+  return Array.isArray(arr) ? arr : [arr];
+}
+
+export function flattenArrayable3<T>(arr?: Nullable<Arrayable<T>>) {}
