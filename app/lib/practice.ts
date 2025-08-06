@@ -171,3 +171,15 @@ export const separateEvenOdd = (arr: number[]) => {
   }
   return obj;
 };
+
+export const sortString = (str: string): string => {
+  const arr: string[] = [];
+  for (const s of str) {
+    arr.push(s);
+  }
+  return arr.sort().join("");
+};
+
+export const reverseSort = (str: string): string => {
+  return str.split("").sort().reverse().join("");
+};
