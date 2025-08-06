@@ -137,7 +137,7 @@ export const removeDuplicates = (arr: number[]) => {
   return setNums;
 };
 
-export const fizzBuzz = (n: number) => {
+export const fizzbuzz = (n: number): string[] => {
   const arr = [];
   for (let i = 1; i <= n; i++) {
     if (i % 15 === 0) {
@@ -156,4 +156,18 @@ export const fizzBuzz = (n: number) => {
 export const average = (arr: number[]) => {
   if (arr.length === 0) return null;
   return arr.reduce((sum, element) => sum + element) / arr.length;
+};
+
+export const separateEvenOdd = (arr: number[]) => {
+  const obj: { even: number[]; odd: number[] } = { even: [], odd: [] };
+  if (arr.length === 0) return obj;
+
+  for (const num of arr) {
+    if (num % 2 === 0) {
+      obj.even.push(num);
+    } else {
+      obj.odd.push(num);
+    }
+  }
+  return obj;
 };
