@@ -216,3 +216,23 @@ export function flattenArrayable3<T>(arr?: Nullable<Arrayable<T>>) {}
 export const countDigits = (n: number) => {
   return String(n).length;
 };
+
+export const sumArray2 = (arr: number[]): number => {
+  return arr.reduce((sum, element) => sum + element, 0);
+};
+
+export const maxInArray2 = (arr: number[]): number | null => {
+  if (arr.length === 0) return null;
+  return Math.max(...arr);
+};
+
+export const maxInArray3 = (arr: number[]): number | null => {
+  if (arr.length === 0) return null;
+  let maxNumber = arr[0];
+  for (const n of arr) {
+    if (maxNumber < n) {
+      maxNumber = n;
+    }
+  }
+  return maxNumber;
+};
