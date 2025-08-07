@@ -10,3 +10,16 @@ function Main(input: string) {
 
   console.log(`${a + b + c} ${s}`);
 }
+
+//ABC086A - Product
+function Product(input: string) {
+  const tmp = input.split(" ");
+
+  const a = parseInt(tmp[0], 10);
+  const b = parseInt(tmp[1], 10);
+  if ((a * b) % 2 === 1) {
+    console.log("Odd");
+  } else {
+    console.log("Even");
+  }
+}

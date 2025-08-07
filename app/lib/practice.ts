@@ -212,3 +212,7 @@ export function toArray3<T>(arr?: Nullable<Arrayable<T>>) {
 }
 
 export function flattenArrayable3<T>(arr?: Nullable<Arrayable<T>>) {}
+
+export const countDigits = (n: number) => {
+  return String(n).length;
+};
