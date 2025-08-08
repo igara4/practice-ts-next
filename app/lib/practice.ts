@@ -236,3 +236,19 @@ export const maxInArray3 = (arr: number[]): number | null => {
   }
   return maxNumber;
 };
+
+export const minInArray = (arr: number[]): number | null => {
+  if (arr.length === 0) return null;
+  return Math.min(...arr);
+};
+
+export const minInArray2 = (arr: number[]): number | null => {
+  if (arr.length === 0) return null;
+  let minNumber = arr[0];
+  for (const n of arr) {
+    if (n < minNumber) {
+      minNumber = n;
+    }
+  }
+  return minNumber;
+};
