@@ -252,3 +252,19 @@ export const minInArray2 = (arr: number[]): number | null => {
   }
   return minNumber;
 };
+
+export const countOccurrences = (arr: number[], target: number) => {
+  if (arr.length === 0) return 0;
+
+  let countNumber = 0;
+  for (const n of arr) {
+    if (n === target) {
+      countNumber += 1;
+    }
+  }
+  return countNumber;
+};
+
+export const countOccurrences2 = (arr: number[], target: number) => {
+  arr.filter((n) => n === target).length;
+};
