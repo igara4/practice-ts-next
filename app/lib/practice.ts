@@ -268,3 +268,24 @@ export const countOccurrences = (arr: number[], target: number) => {
 export const countOccurrences2 = (arr: number[], target: number) => {
   arr.filter((n) => n === target).length;
 };
+
+export const countFrequencies = (arr: number[]) => {
+  if (arr.length === 0) return {};
+  const count: Record<number, number> = {};
+  for (const n of arr) {
+    count[n] = (count[n] ?? 0) + 1;
+  }
+  return count;
+};
+
+export const reverseString = (str: string) => {
+  return str.split("").reverse().join("");
+};
+
+export const reverseString2 = (str: string) => {
+  let reversed = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversed += str[i];
+  }
+  return reversed;
+};
