@@ -309,3 +309,32 @@ export const sumAndAverage = (arr: number[]) => {
   obj.average = obj.sum / arr.length;
   return obj;
 };
+
+export const findMaxMin = (arr: number[]) => {
+  let obj: { max: number | null; min: number | null } = { max: 0, min: 0 };
+  if (arr.length === 0) {
+    return { max: null, min: null };
+  }
+  obj.max = Math.max(...arr);
+  obj.min = Math.min(...arr);
+  return obj;
+};
+
+export const findMaxMin2 = (arr: number[]) => {
+  if (arr.length === 0) {
+    return { max: null, min: null };
+  }
+  let obj: { max: number; min: number } = {
+    max: arr[0],
+    min: arr[0],
+  };
+  for (const n of arr) {
+    if (n > obj.max) {
+      obj.max = n;
+    }
+    if (n < obj.min) {
+      obj.min = n;
+    }
+  }
+  return obj;
+};
