@@ -338,3 +338,17 @@ export const findMaxMin2 = (arr: number[]) => {
   }
   return obj;
 };
+
+export const countChar3 = (str: string, target: string) => {
+  return str.split("").filter((s) => s === target).length;
+};
+
+export const countChar4 = (str: string, target: string) => {
+  let count = 0;
+  for (const s of str) {
+    if (s === target) {
+      count++;
+    }
+  }
+  return count;
+};
