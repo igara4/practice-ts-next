@@ -289,3 +289,23 @@ export const reverseString2 = (str: string) => {
   }
   return reversed;
 };
+
+export const separateEvenOdd2 = (arr: number[]) => {
+  const separate: { even: number[]; odd: number[] } = { even: [], odd: [] };
+  for (const n of arr) {
+    if (n % 2 === 0) {
+      separate.even.push(n);
+    } else {
+      separate.odd.push(n);
+    }
+  }
+  return separate;
+};
+
+export const sumAndAverage = (arr: number[]) => {
+  const obj: { sum: number; average: number } = { sum: 0, average: 0 };
+  if (arr.length === 0) return obj;
+  obj.sum = arr.reduce((sum, element) => sum + element, 0);
+  obj.average = obj.sum / arr.length;
+  return obj;
+};
