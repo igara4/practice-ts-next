@@ -389,3 +389,24 @@ export const countVowels3 = (str: string) => {
       return false;
     }).length;
 };
+
+export const reverseArray = (arr: number[]) => {
+  const a = [...arr];
+  return a.reverse();
+};
+
+export const reverseArray2 = (arr: number[]) => {
+  return arr.slice().reverse();
+};
+
+export const reverseArray3 = (arr: number[]) => {
+  return [...arr].reverse();
+};
+
+export const reverseArray4 = (arr: number[]) => {
+  let result: number[] = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    result.push(arr[i]);
+  }
+  return result;
+};
