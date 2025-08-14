@@ -352,3 +352,40 @@ export const countChar4 = (str: string, target: string) => {
   }
   return count;
 };
+
+export const countVowels = (str: string) => {
+  const vowels = ["a", "i", "u", "e", "o"];
+  return str
+    .toLowerCase()
+    .split("")
+    .filter((s) => vowels.includes(s)).length;
+};
+
+export const countVowels2 = (str: string) => {
+  const vowels = ["a", "i", "u", "e", "o"];
+  let count = 0;
+  const arr = str.toLowerCase().split("");
+  for (const s of arr) {
+    for (const v of vowels) {
+      if (s === v) {
+        count++;
+      }
+    }
+  }
+  return count;
+};
+
+export const countVowels3 = (str: string) => {
+  const vowels = ["a", "i", "u", "e", "o"];
+  return str
+    .toLowerCase()
+    .split("")
+    .filter((s) => {
+      for (const v of vowels) {
+        if (v === s) {
+          return true;
+        }
+      }
+      return false;
+    }).length;
+};
