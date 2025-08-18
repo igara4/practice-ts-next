@@ -410,3 +410,17 @@ export const reverseArray4 = (arr: number[]) => {
   }
   return result;
 };
+
+export const secondLargest = (arr: number[]) => {
+  if (arr.length < 2) return null;
+  const max = Math.max(...arr);
+  const newArray = arr.filter((n) => n !== max);
+  if (newArray.length === 0) return null;
+  return Math.max(...newArray);
+};
+
+export const secondLargest2 = (arr: number[]) => {
+  if (arr.length < 2) return null;
+  const uniqueArr = [...new Set(arr)].sort((a, b) => b - a);
+  return uniqueArr[1] ?? null;
+};
