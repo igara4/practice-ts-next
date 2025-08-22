@@ -424,3 +424,19 @@ export const secondLargest2 = (arr: number[]) => {
   const uniqueArr = [...new Set(arr)].sort((a, b) => b - a);
   return uniqueArr[1] ?? null;
 };
+
+export const secondLargestLoop = (arr: number[]) => {
+  if (arr.length < 2) return null;
+  let firstMax = -Infinity;
+  let secondMax = -Infinity;
+
+  for (const n of arr) {
+    if (n > firstMax) {
+      secondMax = firstMax;
+      firstMax = n;
+    } else if (n < firstMax && n > secondMax) {
+      secondMax = n;
+    }
+  }
+  return secondMax === -Infinity ? null : secondMax;
+};
