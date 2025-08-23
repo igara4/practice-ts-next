@@ -444,11 +444,29 @@ export const secondLargestLoop = (arr: number[]) => {
 export const findMedian = (arr: number[]) => {
   if (arr.length === 0) return null;
   const newArray = [...arr].sort((a, b) => a - b);
+  const mid = Math.floor(newArray.length / 2);
   if (newArray.length % 2 === 1) {
-    return newArray[Math.floor(newArray.length / 2)];
+    return newArray[mid];
   } else {
-    return (
-      (newArray[newArray.length / 2 - 1] + newArray[newArray.length / 2]) / 2
-    );
+    return (newArray[mid - 1] + newArray[mid]) / 2;
+  }
+};
+
+export const findMode = (arr: number[]) => {
+  if (arr.length === 0) return null;
+  const count: Record<number, number> = {};
+
+  for (const n of arr) {
+    count[n] = (count[n] ?? 0) + 1;
+  }
+
+  let mode: number | null = null;
+  let maxCount = 0;
+
+  for (const key in count) {
+    if (count[key] > maxCount) {
+      maxCount = count[key];
+      mode = Number(key);
+    }
   }
 };
