@@ -440,3 +440,15 @@ export const secondLargestLoop = (arr: number[]) => {
   }
   return secondMax === -Infinity ? null : secondMax;
 };
+
+export const findMedian = (arr: number[]) => {
+  if (arr.length === 0) return null;
+  const newArray = [...arr].sort((a, b) => a - b);
+  if (newArray.length % 2 === 1) {
+    return newArray[Math.floor(newArray.length / 2)];
+  } else {
+    return (
+      (newArray[newArray.length / 2 - 1] + newArray[newArray.length / 2]) / 2
+    );
+  }
+};
