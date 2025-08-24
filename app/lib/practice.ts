@@ -470,3 +470,24 @@ export const findMode = (arr: number[]) => {
     }
   }
 };
+
+export const factorial = (n: number) => {
+  if (n === 0) return 1;
+  if (n < 0) return null;
+
+  let result = 1;
+  for (let i = n; i > 0; i--) {
+    result *= i;
+  }
+  return result;
+};
+
+export const factorial2 = (n: number) => {
+  if (n === 0) return 1;
+  if (n < 0) return null;
+
+  return Array.from({ length: n }, (_, i) => i + 1).reduce(
+    (acc, cur) => acc * cur,
+    1
+  );
+};
