@@ -491,3 +491,30 @@ export const factorial2 = (n: number) => {
     1
   );
 };
+
+export const fibonacci = (n: number) => {
+  if (n < 0) return -1;
+  if (n === 0) return 0;
+  if (n === 1) return 1;
+
+  let prev = 0;
+  let curr = 1;
+
+  for (let i = 2; i <= n; i++) {
+    const next = prev + curr;
+    prev = curr;
+    curr = next;
+  }
+  return curr;
+};
+
+export const isPrime = (n: number) => {
+  if (n <= 1) return false;
+  if (n === 2) return true;
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
