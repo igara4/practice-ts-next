@@ -518,3 +518,13 @@ export const isPrime = (n: number) => {
   }
   return true;
 };
+
+export const listPrimes = (n: number): number[] => {
+  const list: number[] = [];
+  for (let i = 2; i <= n; i++) {
+    if (isPrime(i) === true) {
+      list.push(i);
+    }
+  }
+  return list;
+};
