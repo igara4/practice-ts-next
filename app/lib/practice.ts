@@ -536,3 +536,40 @@ export const isAnagram = (s1: string, s2: string) => {
     s2.toLowerCase().split("").sort().join("")
   );
 };
+
+export const isAnagram2 = (s1: string, s2: string) => {
+  if (s1.length !== s2.length) return false;
+  const str1: Record<string, number> = {};
+  const str2: Record<string, number> = {};
+  for (const s of s1.toLowerCase()) {
+    str1[s] = (str1[s] ?? 0) + 1;
+  }
+  for (const s of s2.toLowerCase()) {
+    str2[s] = (str2[s] ?? 0) + 1;
+  }
+
+  for (const key in str1) {
+    if (str1[key] !== str2[key]) {
+      return false;
+    }
+  }
+  return true;
+};
+
+export const isAnagram3 = (s1: string, s2: string) => {
+  if (s1.length !== s2.length) return false;
+
+  const count: Record<string, number> = {};
+
+  for (const char1 of s1.toLowerCase()) {
+    count[char1] = (count[char1] ?? 0) + 1;
+  }
+
+  for (const char2 of s2.toLowerCase()) {
+    if (!count[char2]) {
+      return false;
+    }
+    count[char2]--;
+  }
+  return true;
+};
