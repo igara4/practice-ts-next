@@ -522,9 +522,17 @@ export const isPrime = (n: number) => {
 export const listPrimes = (n: number): number[] => {
   const list: number[] = [];
   for (let i = 2; i <= n; i++) {
-    if (isPrime(i) === true) {
+    if (isPrime(i)) {
       list.push(i);
     }
   }
   return list;
+};
+
+export const isAnagram = (s1: string, s2: string) => {
+  if (s1.length !== s2.length) return false;
+  return (
+    s1.toLowerCase().split("").sort().join("") ===
+    s2.toLowerCase().split("").sort().join("")
+  );
 };
