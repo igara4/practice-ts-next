@@ -573,3 +573,10 @@ export const isAnagram3 = (s1: string, s2: string) => {
   }
   return true;
 };
+
+export const sumAndProduct = (arr: number[]) => {
+  const result: Record<string, number> = { sum: 0, product: 1 };
+  result.sum = arr.reduce((sum, element) => sum + element, 0);
+  result.product = arr.reduce((sum, element) => sum * element, 1);
+  return result;
+};
