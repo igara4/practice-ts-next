@@ -580,3 +580,16 @@ export const sumAndProduct = (arr: number[]) => {
   result.product = arr.reduce((sum, element) => sum * element, 1);
   return result;
 };
+
+export const stats = (arr: number[]) => {
+  const result: Record<string, null | number> = {
+    max: null,
+    min: null,
+    average: null,
+  };
+  if (arr.length === 0) return result;
+  result.max = Math.max(...arr);
+  result.min = Math.min(...arr);
+  result.average = arr.reduce((sum, element) => sum + element, 0) / arr.length;
+  return result;
+};
