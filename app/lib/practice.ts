@@ -605,8 +605,9 @@ export const stats2 = (arr: number[]) => {
   if (arr.length === 0) return result;
   result.max = Math.max(...arr);
   result.min = Math.min(...arr);
-  result.average = arr.reduce((sum, element) => sum + element, 0) / arr.length;
-  result.sum = arr.reduce((sum, element) => sum + element, 0);
+  const sum = arr.reduce((sum, element) => sum + element, 0);
+  result.sum = sum;
+  result.average = sum / arr.length;
   const median = [...arr].sort((a, b) => a - b);
   if (median.length % 2 === 1) {
     result.median = median[Math.floor(median.length / 2)];
