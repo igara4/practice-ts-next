@@ -617,3 +617,13 @@ export const stats2 = (arr: number[]) => {
   }
   return result;
 };
+
+export const countWords = (str: string) => {
+  if (str.length === 0) return 0;
+  return str.split(" ").filter(Boolean).length;
+};
+
+export const countWords2 = (str: string) => {
+  if (str.trim().length === 0) return 0;
+  return str.trim().split(/\s+/).length;
+};
