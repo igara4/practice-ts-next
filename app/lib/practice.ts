@@ -631,3 +631,12 @@ export const countWords2 = (str: string) => {
 export const reverseArray5 = (arr: number[]) => {
   return arr.toReversed();
 };
+
+export const countFrequencies2 = (arr: number[]) => {
+  const count: Record<number, number> = {};
+  if (arr.length === 0) return count;
+  for (const n of arr) {
+    count[n] = (count[n] ?? 0) + 1;
+  }
+  return count;
+};
