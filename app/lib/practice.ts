@@ -627,3 +627,7 @@ export const countWords2 = (str: string) => {
   if (str.trim().length === 0) return 0;
   return str.trim().split(/\s+/).length;
 };
+
+export const reverseArray5 = (arr: number[]) => {
+  return arr.toReversed();
+};
