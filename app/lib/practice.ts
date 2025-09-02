@@ -644,3 +644,7 @@ export const countFrequencies2 = (arr: number[]) => {
 export const intersection = (arr1: number[], arr2: number[]) => {
   return [...new Set(arr1.filter((n) => arr2.includes(n)))];
 };
+
+export const uniqueArray = (arr: number[]) => {
+  return [...new Set(arr)];
+};
