@@ -652,3 +652,10 @@ export const uniqueArray = (arr: number[]) => {
 export const reverseWords = (str: string) => {
   return str.trim().split(/\s+/).reverse().join(" ");
 };
+
+export const reverseEachWord = (str: string) => {
+  return str
+    .split(" ")
+    .map((word) => word.split("").reverse().join(""))
+    .join(" ");
+};
