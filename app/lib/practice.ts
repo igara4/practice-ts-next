@@ -648,3 +648,7 @@ export const intersection = (arr1: number[], arr2: number[]) => {
 export const uniqueArray = (arr: number[]) => {
   return [...new Set(arr)];
 };
+
+export const reverseWords = (str: string) => {
+  return str.trim().split(/\s+/).reverse().join(" ");
+};
