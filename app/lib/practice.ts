@@ -672,4 +672,5 @@ export const firstDuplicateChar = (str: string) => {
     }
     seen.add(char);
   }
+  return null;
 };
