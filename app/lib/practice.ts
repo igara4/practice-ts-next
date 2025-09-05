@@ -663,3 +663,13 @@ export const reverseEachWord = (str: string) => {
 export const hasUniqueChars = (str: string) => {
   return str.length === new Set(str).size;
 };
+
+export const firstDuplicateChar = (str: string) => {
+  const seen = new Set<string>();
+  for (const char of str) {
+    if (seen.has(char)) {
+      return char;
+    }
+    seen.add(char);
+  }
+};
