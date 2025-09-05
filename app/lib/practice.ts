@@ -659,3 +659,7 @@ export const reverseEachWord = (str: string) => {
     .map((word) => word.split("").reverse().join(""))
     .join(" ");
 };
+
+export const hasUniqueChars = (str: string) => {
+  return str.length === new Set(str).size;
+};
