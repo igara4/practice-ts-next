@@ -674,3 +674,10 @@ export const firstDuplicateChar = (str: string) => {
   }
   return null;
 };
+
+export const findMinMax = (arr: number[]) => {
+  const result: Record<string, null | number> = { min: null, max: null };
+  result.max = Math.max(...arr);
+  result.min = Math.min(...arr);
+  return result;
+};
