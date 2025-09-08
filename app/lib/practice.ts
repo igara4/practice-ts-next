@@ -682,3 +682,14 @@ export const findMinMax = (arr: number[]) => {
   result.min = Math.min(...arr);
   return result;
 };
+
+export const findMinMaxLoop = (arr: number[]) => {
+  if (arr.length === 0) return { min: null, max: null };
+  let max = arr[0];
+  let min = arr[0];
+  for (const n of arr) {
+    if (n > max) max = n;
+    if (n < min) min = n;
+  }
+  return { max, min };
+};
