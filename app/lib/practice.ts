@@ -693,3 +693,14 @@ export const findMinMaxLoop = (arr: number[]) => {
   }
   return { max, min };
 };
+
+export const twoSum = (arr: number[], target: number) => {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + i; j < arr.length; j++) {
+      if (arr[i] + arr[j] === target) {
+        return [arr[i], arr[j]];
+      }
+    }
+  }
+  return null;
+};
