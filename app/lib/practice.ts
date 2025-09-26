@@ -704,3 +704,15 @@ export const twoSum = (arr: number[], target: number) => {
   }
   return null;
 };
+
+export const reverseString3 = (str: string) => {
+  return str.split("").reverse().join("");
+};
+
+export const reverseString4 = (str: string) => {
+  let reversed = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversed += str[i];
+  }
+  return reversed;
+};
