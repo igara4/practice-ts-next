@@ -716,3 +716,16 @@ export const reverseString4 = (str: string) => {
   }
   return reversed;
 };
+
+const sumArray3 = (arr: number[]) => {
+  if (arr.length === 0) return 0;
+  return arr.reduce((sum, element) => sum + element, 0);
+};
+
+const sumArray4 = (arr: number[]) => {
+  let sum = 0;
+  for (const n of arr) {
+    sum += n;
+  }
+  return sum;
+};
