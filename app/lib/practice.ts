@@ -734,3 +734,14 @@ export const averageArray = (arr: number[]) => {
   if (arr.length === 0) return 0;
   return arr.reduce((sum, element) => sum + element, 0) / arr.length;
 };
+
+export const medianArray = (arr: number[]) => {
+  if (arr.length === 0) return null;
+  const sortedArr = [...arr].sort((a, b) => a - b);
+  const mid = Math.floor(sortedArr.length / 2);
+  if (arr.length % 2 === 1) {
+    return sortedArr[mid];
+  } else {
+    return (sortedArr[mid - 1] + sortedArr[mid]) / 2;
+  }
+};
