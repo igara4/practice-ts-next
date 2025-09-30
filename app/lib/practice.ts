@@ -745,3 +745,22 @@ export const medianArray = (arr: number[]) => {
     return (sortedArr[mid - 1] + sortedArr[mid]) / 2;
   }
 };
+
+export const modeArray = (arr: number[]) => {
+  const count: Record<number, number> = {};
+  if (arr.length === 0) return null;
+  for (const n of arr) {
+    count[n] = (count[n] ?? 0) + 1;
+  }
+
+  let maxCount = 0;
+  let mode: number | null = null;
+
+  for (const key in count) {
+    if (count[key] > maxCount) {
+      maxCount = count[key];
+      mode = Number(key);
+    }
+  }
+  return mode;
+};
