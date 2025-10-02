@@ -764,3 +764,23 @@ export const modeArray = (arr: number[]) => {
   }
   return mode;
 };
+
+export const countVowels4 = (str: string) => {
+  const vowels = ["a", "i", "u", "e", "o"];
+  let count = 0;
+  if (str.length === 0) return count;
+  for (const s of str.toLowerCase()) {
+    if (vowels.includes(s)) {
+      count += 1;
+    }
+  }
+  return count;
+};
+
+export const countVowels5 = (str: string) => {
+  const vowels = ["a", "i", "u", "e", "o"];
+  return str
+    .toLowerCase()
+    .split("")
+    .filter((s) => vowels.includes(s)).length;
+};
