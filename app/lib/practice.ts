@@ -784,3 +784,19 @@ export const countVowels5 = (str: string) => {
     .split("")
     .filter((s) => vowels.includes(s)).length;
 };
+
+export const reverseArray6 = (arr: number[]) => {
+  return arr.slice().reverse();
+};
+
+export const reverseArray7 = (arr: number[]) => {
+  return [...arr].reverse();
+};
+
+export const reverseArray8 = (arr: number[]) => {
+  const reverseArr = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    reverseArr.push(arr[i]);
+  }
+  return reverseArr;
+};
