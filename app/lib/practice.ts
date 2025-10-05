@@ -800,3 +800,24 @@ export const reverseArray8 = (arr: number[]) => {
   }
   return reverseArr;
 };
+
+export const reverseWord = (str: string) => {
+  return str.split(" ").reverse().join(" ");
+};
+
+export const reverseWord2 = (str: string) => {
+  const result = [];
+  for (let i = str.length - 1; i >= 0; i--) {
+    result.push(str[i]);
+  }
+  return result.join("");
+};
+
+export const reverseEachWord2 = (str: string) => {
+  const words = str.split(" ");
+  const reverseWords: string[] = [];
+  for (const word of words) {
+    reverseWords.push(word.split("").reverse().join(""));
+  }
+  return reverseWords.join(" ");
+};
