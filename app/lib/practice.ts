@@ -821,3 +821,10 @@ export const reverseEachWord2 = (str: string) => {
   }
   return reverseWords.join(" ");
 };
+
+export const reverseEachWord3 = (str: string) => {
+  str
+    .split(" ")
+    .map((word) => word.split("").reverse().join(""))
+    .join(" ");
+};
